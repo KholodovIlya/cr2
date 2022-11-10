@@ -1,0 +1,9 @@
+<div class="main">
+  <div *ngFor="let post of posts">
+    <form class="btn btn-dark">
+      <div><p class="fs-4"><b>{{ post.title }}</b></p></div>
+      <div><p class="fs-5">{{ post.content }}</p></div>
+      <div><p class="fs-6"><i>{{ post.date }}</i></p></div>
+    </form>
+  </div>
+</div>

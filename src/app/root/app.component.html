@@ -1,0 +1,15 @@
+<div>
+  <nav>
+    <a
+      routerLink="/"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><button type="button" class="btn btn-info">Посты</button></a
+    >
+    <a *ngIf="!isLogged" routerLink="/login" routerLinkActive="active-link"><button type="button" class="btn btn-info">Вход</button></a>
+    <a *ngIf="!isLogged" routerLink="/register" routerLinkActive="active-link"><button type="button" class="btn btn-info">Регистрация</button></a>
+    <a *ngIf="isLogged" (click)="logout()"><button type="button" class="btn btn-info">Выйти из аккаунта {{accountUsername}}</button></a>
+    <button (click)="checkUser()" class="btn btn-info">Обновить меню</button>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

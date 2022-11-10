@@ -1,0 +1,21 @@
+<form class="btn btn-dark">
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputText1">Введите ФИО</label>
+            <input type="text" [(ngModel)]="name" class="form-control" id="exampleInputText1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputDate1" class="form-label">Дата рождения</label>
+            <input type="date" class="form-control" id="exampleInputDate1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="user.mail">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Пароль</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="register()">Отправить</button>
+      </form>
+</form>
